@@ -1,0 +1,54 @@
+<%- include('../partials/head.ejs')%> 
+
+<body>
+    <header>
+        <div class="links">
+            <a class="active" href="#">Instructor</a>
+            <a href="#">Members</a>
+        </div>
+    </header>
+
+    <form class="card" method="POST" action="/instructors">
+        <section class="avatar" style="background: url(https://source.unsplash.com/collection/10552289/500x500) center center /cover"></section>
+        <section class="details">
+            <h3>Editar Instrutor</h3>
+            <div class="item">
+                <div>Avatar Url</div>
+                <div>
+                    <input type="url" name="avatarUrl" placeholder="http://">
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Instrutor</div>
+                <div>
+                    <input type="text" name="name" placeholder="Nome do instrutor">
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Data de Nascimento</div>
+                <input type="date" name="birth">
+            </div>
+
+            <div class="item">
+                <div>Sexo</div>
+                <div>
+                    <span><input type="radio" id="gender" value="M">Masculino</span>
+                    <span><input type="radio" id="gender" value="F">Feminino</span>
+                   
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Area de atuação</div>
+                <div>
+                    <input type="text" name="services" placeholder="Separe os serviços prestados por virgula">
+                </div>
+            </div>
+
+            <button type="submit">Salvar</button>
+        </section>
+    </form>
+</body>
+</html>
